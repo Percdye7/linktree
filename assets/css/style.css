@@ -1,0 +1,28 @@
+body {
+  background-image: url("../img/background.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+}
+
+.game-icon {
+  width: 32px;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.faceit {
+  background-color: rgb(255, 108, 32);
+  color: white;
+}
+.faceit:hover {
+  color: white;
+  background-color: rgb(255, 108, 32);
+}
+
+hr {
+  color: #0d6efd !important;
+  opacity: 1;
+  border-width: 5px;
+}
