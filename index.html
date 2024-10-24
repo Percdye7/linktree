@@ -62,9 +62,24 @@
 
                             <hr>
                             <h2 class="fw-bold text-uppercase">Tracking</h2>
-                            <a href="https://www.steamidfinder.com/" target="_blank" class="btn btn-primary w-100 mb-3">SteamID Finder</a>
-                            <a href="https://faceitfinder.com/" target="_blank" class="btn btn-primary w-100 mb-3">FACEIT Account Finder (Unreliable)</a>
-                            <a href="https://www.faceit.com/en" target="_blank" class="btn faceit w-100">FACEIT</a>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">SteamID64</span>
+                                <div class="form-floating">
+                                  <input type="text" class="form-control p-1" id="floatingInputGroup1" placeholder="Username">
+                                </div>
+                              </div>
+                            <a onclick="redirectSTEAMIDFINDER()" target="_blank" class="btn btn-primary w-100 mb-3">SteamID Finder</a>
+
+                            <div class="d-flex gap-3">
+                                <a onclick="redirectFACEITFINDER()" target="_blank" class="btn btn-primary w-100 d-inline">FACEIT Account Finder (Direct Search)</a>
+                                <a href="https://faceitfinder.com/" target="_blank" class="btn btn-primary w-100 d-inline">FACEIT Account Finder</a>
+                            </div>
+
+
+                            <div class="d-flex gap-3 mt-3">
+                                <a onclick="redirectFACEITSEARCH()" target="_blank" class="btn faceit w-100 d-inline">FACEIT Account (Direct Search)</a>
+                                <a href="https://faceitfinder.com/" target="_blank" class="btn faceit w-100 d-inline">FACEIT</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -91,7 +106,7 @@
                             <hr>
                             <h2 class="fw-bold text-uppercase">Info</h2>
                             <a href="https://www.todayindestiny.com" target="_blank" class="btn btn-primary w-100 mb-3">Where is Xur</a>
-                            <a href="#" target="_blank" class="btn btn-primary w-100">Shuro Chi Wish</a>
+                            <a data-fslightbox href="./assets/img/d2wish/shuro.webp" class="btn btn-primary w-100">Shuro Chi Wish</a>
                             <hr>
                             <h2 class="fw-bold text-uppercase">Misc</h2>
                             <hr>
@@ -131,6 +146,38 @@
         </div>
     </footer>
     <script src="assets/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/dist/fslightbox/fslightbox.js"></script>
+
+    <script>
+        function redirectSTEAMIDFINDER() {
+            var inputValue = document.getElementById('floatingInputGroup1').value;
+            if (inputValue.trim() !== "") {
+                var url = "https://www.steamidfinder.com/lookup/" + inputValue;
+                window.open(url, '_blank');
+            } else {
+                alert("Bitte geben Sie eine gültige ID ein.");
+            }
+        }
+        function redirectFACEITFINDER() {
+            var inputValue = document.getElementById('floatingInputGroup1').value;
+            if (inputValue.trim() !== "") {
+                var url = "https://faceitfinder.com/profile/" + inputValue;
+                window.open(url, '_blank');
+            } else {
+                alert("Bitte geben Sie eine gültige ID ein.");
+            }
+        }
+        function redirectFACEITSEARCH() {
+            var inputValue = document.getElementById('floatingInputGroup1').value;
+            if (inputValue.trim() !== "") {
+                var url = "https://www.faceit.com/en/search/overview/" + inputValue;
+                window.open(url, '_blank');
+            } else {
+                alert("Bitte geben Sie eine gültige ID ein.");
+            }
+        }
+    </script>
+
 </body>
 
 </html>
