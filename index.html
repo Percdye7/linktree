@@ -153,59 +153,9 @@
             </div>
         </div>
     </footer>
+
     <script src="assets/dist/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/dist/fslightbox/fslightbox.js"></script>
-
-    <script>
-        function redirectSTEAMIDFINDER() {
-            var inputValue = document.getElementById('floatingInputGroup1').value;
-
-            if (inputValue.trim() !== "") {
-                // Regex, um alles vor dem letzten Slash zu entfernen
-                var regex = /([^\/]+)$/; // Greift nur den letzten Teil nach dem letzten Slash
-                var match = inputValue.match(regex);
-
-                if (match) {
-                    var extractedID = match[1];
-                    var url = "https://www.steamidfinder.com/lookup/" + extractedID;
-                    window.open(url, '_blank');
-                } else {
-                    alert("Keine gültige ID gefunden.");
-                }
-            } else {
-                alert("Bitte geben Sie eine gültige ID ein.");
-            }
-        }
-        function redirectFACEITFINDER() {
-            var inputValue = document.getElementById('floatingInputGroup1').value;
-
-            if (inputValue.trim() !== "") {
-                // Regex, um alles vor dem letzten Slash zu entfernen
-                var regex = /([^\/]+)$/; // Greift nur den letzten Teil nach dem letzten Slash
-                var match = inputValue.match(regex);
-
-                if (match) {
-                    var extractedID = match[1];
-                    var url = "https://faceitfinder.com/profile/" + extractedID;
-                    window.open(url, '_blank');
-                } else {
-                    alert("Keine gültige ID gefunden.");
-                }
-            } else {
-                alert("Bitte geben Sie eine gültige ID ein.");
-            }
-        }
-        function redirectFACEITSEARCH() {
-            var inputValue = document.getElementById('floatingInputGroup1').value;
-            if (inputValue.trim() !== "") {
-                var url = "https://www.faceit.com/en/search/player/" + inputValue;
-                // old link: https://www.faceit.com/en/search/overview/
-                window.open(url, '_blank');
-            } else {
-                alert("Bitte geben Sie eine gültige ID ein.");
-            }
-        }
-    </script>
+    <script src="assets/js/app.js"></script>
 </body>
-
 </html>
