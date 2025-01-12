@@ -22,140 +22,151 @@
     <main>
 
         <div class="container">
-            <a href="https://google.de/" target="_blank" class="btn btn-primary w-100 mb-3">Google</a>
+            <a href="https://google.de/" target="_blank" class="btn btn-primary w-25 mb-3 d-block mx-auto">Google</a>
         </div>
 
-        <div class="container">
-            <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="container-fluid w-75"> <!-- .START. Main Container -->
+
+
+            <div class="accordion mb-4" id="accordionSteam"> <!-- .START. Steam Accordion -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
+                            data-bs-target="#panelSteamCollapse" aria-expanded="false"
+                            aria-controls="panelSteamCollapse">
                             <img src="assets/img/game-icon/64x64/steam.webp" class="game-icon">
-                            Steam
+                            <span class="fw-bold">Steam</span>
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                    <div id="panelSteamCollapse" class="accordion-collapse collapse hide">
                         <div class="accordion-body">
-                            <h2 class="fw-bold text-uppercase">Steam Status</h2>
-                            <hr>
-                            <a href="https://steamstat.us/" target="_blank" class="btn btn-primary w-100 mb-3">Steam Status</a>
-                            <h2 class="fw-bold text-uppercase">Steam DB</h2>
-                            <hr>
-                            <a href="https://steamdb.info/" target="_blank" class="btn btn-primary w-100 mb-3">Steam DB</a>
+                            <div class="row">
+                                <div class="col col-12 col-md-6">
+                                    <h3 class="fw-bold text-uppercase">Steam DB</h3>
+                                    <hr>
+                                    <a href="https://steamdb.info/" target="_blank" class="btn btn-primary w-100">Steam DB</a>
+                                </div>
+                                <div class="col col-12 col-md-6">
+                                    <h3 class="fw-bold text-uppercase">Steam Status</h3>
+                                    <hr>
+                                    <a href="https://steamstat.us/" target="_blank" class="btn btn-primary w-100">Steam Status</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div> <!-- .END. Steam Accordion -->
+
+            
+            <div class="accordion mb-4" id="accordionCS2"> <!-- .START. Counter-Strike Accordion -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
+                            data-bs-target="#panelCounterStrikeCollapse" aria-expanded="false"
+                            aria-controls="panelCounterStrikeCollapse">
                             <img src="assets/img/game-icon/64x64/cs2.webp" class="game-icon">
-                            Counter-Strike 2
+                            <span class="fw-bold">Counter-Strike 2</span>
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                    <div id="panelCounterStrikeCollapse" class="accordion-collapse collapse hide">
                         <div class="accordion-body">
-                            <h2 class="fw-bold text-uppercase">Skins</h2>
-                            <hr>
 
-                            <a href="https://skinport.com/" target="_blank" class="btn btn-primary w-100 mb-3">Skinport (Markt)</a>
-                            <a href="https://csfloat.com/" target="_blank" class="btn btn-primary w-100 mb-3">CSFloat (Markt)</a>
-                            <a href="https://stash.clash.gg/" target="_blank" class="btn btn-primary w-100 mb-3">CSGO Stash (Items Overview)</a>
-                            <a href="https://csroi.com/" target="_blank" class="btn btn-primary w-100 mb-3">CSGO ROI (Case Profit Rates)</a>
-                            <a href="https://cs2inspects.com/" target="_blank" class="btn btn-primary w-100 mb-3">CS2 Inspects (Ingame Skin Inspect)</a>
-                            <a href="https://csnades.gg/" target="_blank" class="btn btn-primary w-100">CS Nades (Nade Lineups)</a>
-
-                            <hr>
-                            <h2 class="fw-bold text-uppercase">Tracking</h2>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">SteamID64</span>
-                                <div class="form-floating">
-                                  <input type="text" class="form-control p-1" id="floatingInputGroup1" placeholder="Username">
+                            <div class="row">
+                                <div class="col col-12 col-md-6">
+                                    <h3 class="fw-bold text-uppercase">Skins / Marktplatz</h3>
+                                    <hr>
+                                    <a href="https://skinport.com/" target="_blank" class="btn btn-primary w-100 mb-3">Skinport (Marktplatz)</a>
+                                    <a href="https://csfloat.com/" target="_blank" class="btn btn-primary w-100 mb-3">CSFloat (Marktplatz)</a>
+                                    <a href="https://stash.clash.gg/" target="_blank" class="btn btn-primary w-100 mb-3">CS-Stash (Skin-Datenbank)</a>
+                                    <a href="https://csroi.com/" target="_blank" class="btn btn-primary w-100 mb-3">CSROI (Case-Invest/Profit)</a>
+                                    <a href="https://cs2inspects.com/" target="_blank" class="btn btn-primary w-100">CS2Inspects (Skin-Inspect Ingame)</a>
                                 </div>
-                              </div>
-                            <a onclick="redirectSTEAMIDFINDER()" target="_blank" class="btn btn-primary w-100 mb-3">SteamID Finder</a>
 
-                            <div class="d-flex gap-3">
-                                <a href="https://www.faceit.com/en" target="_blank" class="btn faceit w-100 d-inline">FACEIT Normal Page (Open in New Tab)</a>
-                                <a href="https://faceitfinder.com/" target="_blank" class="btn btn-primary w-100 d-inline">FACEIT Account Finder</a>
+                                <div class="col col-12 col-md-6 mt-3 mt-md-0">
+                                    <h3 class="fw-bold text-uppercase">FACEIT / Tracking</h3>
+                                    <hr>
+
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">SteamID64/Community Link</span>
+                                        <div class="form-floating">
+                                          <input type="text" class="form-control" id="floatingInputGroup1" placeholder="Username">
+                                        </div>
+                                    </div>
+                                    <a onclick="redirectSTEAMIDFINDER()" target="_blank" class="btn btn-primary w-100 mb-3">SteamID Finder</a>
+
+
+                                    <div class="pagedescriptioncontainer">
+                                        <span class="FACEITSQUARE"></span> = Direkte Suche
+                                        <span class="NORMALPAGESQUARE"></span> = Normale Page
+                                    </div>
+                                    <div class="row">
+                                        <div class="col col-12 col-md-6">
+                                            <a onclick="redirectFACEITSEARCH()" target="_blank" class="btn faceit w-100 mb-3">FACEIT Account</a>
+                                            <a onclick="redirectFACEITFINDER()" target="_blank" class="btn faceit w-100 mb-3">FACEIT Account Finder</a>
+                                        </div>
+                                        <div class="col col-12 col-md-6">
+                                            <a href="https://www.faceit.com/en" target="_blank" class="btn btn-primary w-100 mb-3">FACEIT Normal Page</a>
+                                            <a href="https://faceitfinder.com/" target="_blank" class="btn btn-primary w-100">FACEIT Account Finder</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col col-12">
+                                    <h3 class="fw-bold text-uppercase">Statistiken & Nades</h3>
+                                    <hr>
+                                    <a href="https://csnades.gg/" target="_blank" class="btn btn-primary w-100 mb-3">CSNades (Nade-Lineups)</a>
+                                    <a href="https://csstats.gg/" target="_blank" class="btn btn-primary w-100 mb-3">CSStats (Spieler Stats)</a>
+                                    <a href="https://leetify.com/" target="_blank" class="btn btn-primary w-100">Leetify (Spieler Stats / Eigene)</a>
+                                </div>
                             </div>
 
-
-                            <div class="d-flex gap-3 mt-3">
-                                <a onclick="redirectFACEITSEARCH()" target="_blank" class="btn faceit w-100 d-inline">FACEIT Account (Direct Search)</a>
-                                <a onclick="redirectFACEITFINDER()" target="_blank" class="btn btn-primary w-100 d-inline">FACEIT Account Finder (Direct Search)</a>
-                            </div>
                         </div>
                     </div>
                 </div>
+            </div> <!-- .END. Counter-Strike Accordion -->
+
+
+            <div class="accordion mb-4" id="accordionSmite"> <!-- .START. Smite Accordion -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            <img src="assets/img/game-icon/64x64/destiny2.webp" class="game-icon">
-                            Destiny 2
-                        </button>
-                    </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                        <div class="accordion-body">
-                            <h2 class="fw-bold text-uppercase">Weapons & Items</h2>
-                            <hr>
-                            <a href="https://app.destinyitemmanager.com/" target="_blank" class="btn btn-primary w-100 mb-3">DIM</a>
-                            <a href="https://www.light.gg/" target="_blank" class="btn btn-primary w-100 mb-3">Light.gg</a>
-                            <a href="https://d2gunsmith.com/" target="_blank" class="btn btn-primary w-100">D2 Gunsmith</a>
-                            <hr>
-                            <h2 class="fw-bold text-uppercase">Tracking</h2>
-                            <a href="https://raid.report/" target="_blank" class="btn btn-primary w-100 mb-3">Raid Report</a>
-                            <a href="https://dungeon.report/" target="_blank" class="btn btn-primary w-100">Dungeon Report</a>
-                            <hr>
-                            <h2 class="fw-bold text-uppercase">Info</h2>
-                            <a href="https://www.todayindestiny.com" target="_blank" class="btn btn-primary w-100 mb-3">Where is Xur</a>
-                            <a data-fslightbox href="./assets/img/d2wish/shuro.webp" class="btn btn-primary w-100">Shuro Chi Wish</a>
-                            <hr>
-                            <h2 class="fw-bold text-uppercase">Misc</h2>
-                            <hr>
-                            <a href="https://www.todayindestiny.com" target="_blank" class="btn btn-primary w-100 mb-3">Today in Destiny</a>
-                            <a href="https://www.bungie.net/7/en/News" target="_blank" class="btn btn-primary w-100 mb-3">Bungie News</a>
-                            <a href="https://www.reddit.com/r/destinythegame/" target="_blank" class="btn btn-primary w-100">Subreddit</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelSmiteCollapse" aria-expanded="false"
+                            aria-controls="panelSmiteCollapse">
                             <img src="assets/img/game-icon/64x64/smite2.webp" class="game-icon">
-                            Smite
+                            <span class="fw-bold">Smite & Smite 2</span>
                         </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                    <div id="panelSmiteCollapse" class="accordion-collapse collapse hide">
                         <div class="accordion-body">
-                            <h2 class="fw-bold text-uppercase">Builds</h2>
-                            <hr>
-                            <a href="https://prosmitebuilds.com/" target="_blank" class="btn btn-primary w-100 mb-3">Prosmitebuilds</a>
+                            <div class="row">
+                                <div class="col col-12 col-md-6">
+                                    <h3 class="fw-bold text-uppercase">Tracking</h3>
+                                    <hr>
+                                    <a href="https://smite.guru/" target="_blank" class="btn btn-primary w-100">Smite Guru</a>
+                                </div>
+                                <div class="col col-12 col-md-6">
+                                    <h3 class="fw-bold text-uppercase">Item Builds</h3>
+                                    <hr>
+                                    <a href="https://prosmitebuilds.com/" target="_blank" class="btn btn-primary w-100">Pro Smite Builds</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> <!-- .END. Smite Accordion -->
+        </div> <!-- .END. Main Container  -->
     </main>
     <footer>
         <div class="container">
             <div class="row py-5">
                 <div class="col text-center">
-                    <strong><small>&copy; 2024</small></strong>
+                    <strong><small>&copy; 2025</small></strong>
                 </div>
             </div>
         </div>
     </footer>
 
     <script src="assets/dist/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/dist/fslightbox/fslightbox.js"></script>
+    <!-- Currently unused <script src="assets/dist/fslightbox/fslightbox.js"></script>-->
     <script src="assets/js/app.js"></script>
 </body>
 </html>

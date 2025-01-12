@@ -26,3 +26,27 @@ hr {
   opacity: 1;
   border-width: 5px;
 }
+
+.pagedescriptioncontainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.FACEITSQUARE {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-color: rgb(255, 108, 32);
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.NORMALPAGESQUARE {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background-color: #0d6efd;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-left: 16px;
+}
