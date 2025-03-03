@@ -50,3 +50,15 @@ hr {
   margin-right: 8px;
   margin-left: 16px;
 }
+
+.puzzlebutton {
+  background-color: rgb(140, 0, 255);
+  border-color: rgb(140, 0, 255);
+  color: white;
+}
+
+.puzzlebutton:hover {
+  background-color: rgb(45, 0, 81);
+  border-color: rgb(45, 0, 81);
+  color: white;
+}
